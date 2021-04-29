@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
-  spec.name             = 'RxStarscream'
-  spec.version          = '0.10'
+  spec.name             = 'WCRxStarscream'
+  spec.version          = '0.11'
   spec.license          = 'Apache License, Version 2.0'
   spec.homepage         = 'https://github.com/RxSwiftCommunity/RxStarscream'
   spec.authors          = { 'Guy Kahlon' => 'guykahlon@gmail.com' }
   spec.summary          = 'A lightweight extension to subscribe Starscream websocket events with RxSwift.'
-  spec.source           = { :git => 'https://github.com/RxSwiftCommunity/RxStarscream.git', :tag => spec.version.to_s }
+  spec.source           = { :git => 'git@github.com:dKasabwala/RxStarscream.git', :tag => spec.version.to_s }
   spec.source_files     = 'Source/*.swift'
   spec.requires_arc     = true
   spec.ios.deployment_target = '8.0'
