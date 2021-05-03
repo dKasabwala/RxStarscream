@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'WCRxStarscream'
-  spec.version          = '0.11'
+  spec.version          = '0.12'
   spec.license          = 'Apache License, Version 2.0'
   spec.homepage         = 'https://github.com/RxSwiftCommunity/RxStarscream'
   spec.authors          = { 'Guy Kahlon' => 'guykahlon@gmail.com' }
