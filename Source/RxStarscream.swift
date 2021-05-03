@@ -15,7 +15,7 @@ public enum WebSocketEvent {
     case pong
 }
 
-public class RxWebSocketDelegateProxy<Client: WebSocketClient>: DelegateProxy<Client, NSObjectProtocol>, DelegateProxyType, WebSocketDelegate, WebSocketPongDelegate {
+public class RxWebSocketDelegateProxy<Client: WebSocket>: DelegateProxy<Client, NSObjectProtocol>, DelegateProxyType, WebSocketDelegate, WebSocketPongDelegate {
 
     private weak var forwardDelegate: WebSocketDelegate?
     private weak var forwardPongDelegate: WebSocketPongDelegate?
@@ -69,7 +69,7 @@ public class RxWebSocketDelegateProxy<Client: WebSocketClient>: DelegateProxy<Cl
     }
 }
 
-extension Reactive where Base: WebSocketClient {
+extension Reactive where Base: WebSocket {
 
     public var response: Observable<WebSocketEvent> {
         return RxWebSocketDelegateProxy.proxy(for: base).subject
